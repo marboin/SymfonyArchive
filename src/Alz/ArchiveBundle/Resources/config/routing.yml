@@ -1,0 +1,14 @@
+alz_archive_homepage:
+    path:     /
+    defaults: { _controller: AlzArchiveBundle:Default:index }
+    
+alz_archive_first:
+    pattern: /{id}/first.{_format}
+    defaults: { _controller: "AlzArchiveBundle:Default:firstTest", _format: html }
+    requirements:
+        _format: html
+        id: \d+
+    
+alz_archive_second:
+    pattern: /second
+    defaults: { _controller: AlzArchiveBundle:Default:secondTest }
